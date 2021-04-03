@@ -17,6 +17,7 @@ class MainActivity : AppCompatActivity() {
     lateinit var binding: ActivityMainBinding
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
+
         binding = ActivityMainBinding.inflate(layoutInflater)
         setContentView(binding.root)
         supportActionBar?.hide()
@@ -43,6 +44,7 @@ class MainActivity : AppCompatActivity() {
             findNavController(id.id).navigate(R.id.action_navigation_home_to_loginFragment)
             binding.navView.visibility = View.GONE
         }
+
 
     }
 

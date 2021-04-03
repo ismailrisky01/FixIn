@@ -10,6 +10,7 @@
         android:name="com.example.fixin.ui.home.HomeFragment"
         android:label="@string/title_home"
         tools:layout="@layout/fragment_home" >
+<!-- <<<<<<< ismailr-dev -->
         <action
             android:id="@+id/action_navigation_home_to_profileFragment"
             app:destination="@id/profileFragment" />
@@ -27,6 +28,7 @@
         <action
             android:id="@+id/action_navigation_home_to_fixChatFragment2"
             app:destination="@id/fixChatFragment" />
+
     </fragment>
 
     <fragment
@@ -56,6 +58,7 @@
         android:id="@+id/registerFragment"
         android:name="com.example.fixin.RegisterFragment"
         android:label="fragment_register"
+<!-- <<<<<<< ismailr-dev -->
         tools:layout="@layout/fragment_register" />
     <fragment
         android:id="@+id/profileFragment"
@@ -93,4 +96,57 @@
         android:name="com.example.fixin.ui.fixchat.FixChatFragment"
         android:label="fragment_fix_chat"
         tools:layout="@layout/fragment_fix_chat" />
+        
+    </fragment>
+    <fragment
+        android:id="@+id/fixerAfterRegisterFragment"
+        android:name="com.example.fixin.FixerAfterRegisterFragment"
+        android:label="fragment_register_after_fixer"
+        tools:layout="@layout/fragment_fixer_after_register" >
+        <action
+            android:id="@+id/action_fixerAfterRegisterFragment_to_navigation_home"
+            app:destination="@id/navigation_home" />
+    </fragment>
+    <fragment
+        android:id="@+id/invoiceFragment"
+        android:name="com.example.fixin.InvoiceFragment"
+        android:label="fragment_invoice"
+        tools:layout="@layout/fragment_invoice" />
+    <fragment
+        android:id="@+id/fixHouseAfterRegister"
+        android:name="com.example.fixin.FixHouseAfterRegisterFragment"
+        android:label="fragment_fix_house_after_register"
+        tools:layout="@layout/fragment_fix_house_after_register" >
+        <action
+            android:id="@+id/action_fixHouseAfterRegister_to_navigation_home"
+            app:destination="@id/navigation_home" />
+    </fragment>
+    <fragment
+        android:id="@+id/createPostFragment"
+        android:name="com.example.fixin.CreatePostFragment"
+        android:label="fragment_create_post"
+        tools:layout="@layout/fragment_create_post" />
+    <fragment
+        android:id="@+id/bukaJasaFixerFragment"
+        android:name="com.example.fixin.BukaJasaFixerFragment"
+        android:label="fragment_buka_jasa_fixer"
+        tools:layout="@layout/fragment_buka_jasa_fixer" >
+        <action
+            android:id="@+id/action_bukaJasaFixerFragment_to_fixerAfterRegisterFragment"
+            app:destination="@id/fixerAfterRegisterFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/bukaFixHouseFragment"
+        android:name="com.example.fixin.BukaFixHouseFragment"
+        android:label="fragment_buka_fix_house"
+        tools:layout="@layout/fragment_buka_fix_house" >
+        <action
+            android:id="@+id/action_bukaFixHouseFragment_to_fixHouseAfterRegister"
+            app:destination="@id/fixHouseAfterRegister" />
+    </fragment>
+    <fragment
+        android:id="@+id/fixHouseContentFragment"
+        android:name="com.example.fixin.FixHouseContentFragment"
+        android:label="fragment_fix_house_content"
+        tools:layout="@layout/fragment_fix_house_content" />
 </navigation>
