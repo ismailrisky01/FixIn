@@ -3,22 +3,32 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/mobile_navigation"
-    app:startDestination="@+id/navigation_home">
+    app:startDestination="@id/navigation_home">
 
     <fragment
         android:id="@+id/navigation_home"
         android:name="com.example.fixin.ui.home.HomeFragment"
         android:label="@string/title_home"
         tools:layout="@layout/fragment_home" >
-        <argument
-            android:name="username"
-            app:argType="string" />
-        <argument
-            android:name="password"
-            app:argType="string" />
-        <argument
-            android:name="email"
-            app:argType="string" />
+<!-- <<<<<<< ismailr-dev -->
+        <action
+            android:id="@+id/action_navigation_home_to_profileFragment"
+            app:destination="@id/profileFragment" />
+        <action
+            android:id="@+id/action_navigation_home_to_loginFragment"
+            app:destination="@id/loginFragment" />
+        <action
+            android:id="@+id/action_navigation_home_to_fixerFragment"
+            app:destination="@id/fixerFragment"
+            app:enterAnim="@anim/nav_default_enter_anim"
+            app:popEnterAnim="@anim/nav_default_pop_enter_anim" />
+        <action
+            android:id="@+id/action_navigation_home_to_fixHouseFragment2"
+            app:destination="@id/fixHouseFragment" />
+        <action
+            android:id="@+id/action_navigation_home_to_fixChatFragment2"
+            app:destination="@id/fixChatFragment" />
+
     </fragment>
 
     <fragment
@@ -34,17 +44,59 @@
         tools:layout="@layout/fragment_notifications" />
     <fragment
         android:id="@+id/loginFragment"
-        android:name="com.example.fixin.LoginFragment"
+        android:name="com.example.fixin.ui.login.LoginFragment"
         android:label="fragment_login"
-        tools:layout="@layout/fragment_login" />
+        tools:layout="@layout/fragment_login" >
+        <action
+            android:id="@+id/action_loginFragment_to_navigation_home"
+            app:destination="@id/navigation_home" />
+        <action
+            android:id="@+id/action_loginFragment_to_registerFragment"
+            app:destination="@id/registerFragment" />
+    </fragment>
     <fragment
         android:id="@+id/registerFragment"
         android:name="com.example.fixin.RegisterFragment"
         android:label="fragment_register"
-        tools:layout="@layout/fragment_register" >
+<!-- <<<<<<< ismailr-dev -->
+        tools:layout="@layout/fragment_register" />
+    <fragment
+        android:id="@+id/profileFragment"
+        android:name="com.example.fixin.ui.profile.ProfileFragment"
+        android:label="fragment_profile"
+        tools:layout="@layout/fragment_profile" />
+    <fragment
+        android:id="@+id/fixerFragment"
+        android:name="com.example.fixin.ui.fixer.FixerFragment"
+        android:label="fragment_fixer"
+        tools:layout="@layout/fragment_fixer" >
         <action
-            android:id="@+id/action_registerFragment_to_navigation_home"
+            android:id="@+id/action_fixerFragment_to_navigation_home"
             app:destination="@id/navigation_home" />
+        <action
+            android:id="@+id/action_fixerFragment_to_fixerPencarianFragment"
+            app:destination="@id/fixerPencarianFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/fixHouseFragment"
+        android:name="com.example.fixin.ui.fixhouse.FixHouseFragment"
+        android:label="fragment_fix_house"
+        tools:layout="@layout/fragment_fix_house" />
+    <fragment
+        android:id="@+id/fixerPencarianFragment"
+        android:name="com.example.fixin.ui.fixer.filter.FixerFilterPencarianFragment"
+        android:label="fragment_fixer_pencarian"
+        tools:layout="@layout/fragment_fixer_filter_pencarian_" >
+        <action
+            android:id="@+id/action_fixerPencarianFragment_to_profileFragment"
+            app:destination="@id/profileFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/fixChatFragment"
+        android:name="com.example.fixin.ui.fixchat.FixChatFragment"
+        android:label="fragment_fix_chat"
+        tools:layout="@layout/fragment_fix_chat" />
+        
     </fragment>
     <fragment
         android:id="@+id/fixerAfterRegisterFragment"

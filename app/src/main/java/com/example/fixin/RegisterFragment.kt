@@ -14,8 +14,10 @@ import com.google.android.material.snackbar.Snackbar
 import kotlinx.android.synthetic.main.fragment_register.*
 
 
+
 class RegisterFragment : Fragment(R.layout.fragment_register) {
 //    val registerLayout: ConstraintLayout? = null
+
 
     override fun onCreateView(
         inflater: LayoutInflater,
@@ -30,6 +32,7 @@ class RegisterFragment : Fragment(R.layout.fragment_register) {
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
+
         button_buat_akun.setOnClickListener {
 //            val action = RegisterFragmentDirections.actionRegisterFragmentToNavigationHome(signUp(usernameSignUp, emailSignUp, passwordSignUp))
             val action = RegisterFragmentDirections.actionRegisterFragmentToNavigationHome()
