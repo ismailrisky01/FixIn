@@ -12,7 +12,6 @@ import androidx.navigation.ui.setupActionBarWithNavController
 import androidx.navigation.ui.setupWithNavController
 import com.example.fixin.databinding.ActivityMainBinding
 import com.google.firebase.auth.FirebaseAuth
-import kotlinx.android.synthetic.main.activity_main.*
 
 class MainActivity : AppCompatActivity() {
     lateinit var binding: ActivityMainBinding
@@ -31,6 +30,7 @@ class MainActivity : AppCompatActivity() {
         navController.addOnDestinationChangedListener { _, destination, _ ->
             when (destination.id) {
                 R.id.profileFragment -> binding.navView.visibility = View.GONE
+                R.id.navigation_home -> binding.navView.visibility = View.VISIBLE
                 R.id.loginFragment -> binding.navView.visibility = View.GONE
             }
         }

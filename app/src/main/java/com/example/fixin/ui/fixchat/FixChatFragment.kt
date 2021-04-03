@@ -1,13 +1,14 @@
-package com.example.fixin
+package com.example.fixin.ui.fixchat
 
 import android.os.Bundle
 import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import com.example.fixin.R
 
 
-class RegisterFragment : Fragment() {
+class FixChatFragment : Fragment() {
 
 
     override fun onCreateView(
@@ -15,11 +16,8 @@ class RegisterFragment : Fragment() {
         savedInstanceState: Bundle?
     ): View? {
         // Inflate the layout for this fragment
-        return inflater.inflate(R.layout.fragment_register, container, false)
+        return inflater.inflate(R.layout.fragment_fix_chat, container, false)
     }
 
-    override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
-        super.onViewCreated(view, savedInstanceState)
 
-    }
 }

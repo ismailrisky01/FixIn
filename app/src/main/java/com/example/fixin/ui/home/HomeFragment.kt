@@ -20,31 +20,38 @@ import com.xwray.groupie.GroupieViewHolder
 import com.xwray.groupie.Item
 
 class HomeFragment : Google() {
-
+lateinit var binding: FragmentHomeBinding
     private lateinit var homeViewModel: HomeViewModel
     override fun onCreateView(
         inflater: LayoutInflater,
         container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View? {
-        val binding = FragmentHomeBinding.inflate(inflater, container, false)
+        binding = FragmentHomeBinding.inflate(inflater, container, false)
         return binding.root
     }
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
-        val binding = FragmentHomeBinding.bind(view)
+
         val data = ArrayList<ModelTransaksi>()
         data.add(ModelTransaksi("Mas Akbar akan mengservice ac pada pukul 14.00"))
         binding.IDRecyclerViewHome.layoutManager = LinearLayoutManager(requireContext())
-        binding.IDRecyclerViewHome.adapter = HomeTransaksiAdapter(requireContext(),data)
-        binding.imageView3.setOnClickListener {
-            signOut()
-            findNavController().navigate(R.id.action_navigation_home_to_loginFragment)
+        binding.IDRecyclerViewHome.adapter = HomeTransaksiAdapter(requireContext(), data)
+        binding.IDImageProfile.setOnClickListener {
+            findNavController().navigate(R.id.action_navigation_home_to_profileFragment)
         }
-        binding.IDImageProfile.setOnClickListener { findNavController().navigate(R.id.action_navigation_home_to_profileFragment) }
+        binding.IDHomeBtnFixer.setOnClickListener {
+            findNavController().navigate(R.id.action_navigation_home_to_fixerFragment)
+        }
+        binding.IDHomeBtnFixHouse.setOnClickListener {
+            findNavController().navigate(R.id.action_navigation_home_to_fixHouseFragment2)
+        }
+        binding.IDHomeBtnChat.setOnClickListener {
+            findNavController().navigate(R.id.action_navigation_home_to_fixChatFragment2)
+        }
     }
 
-    class ModelTransaksi(val txt1: String) {}
+
 
 }

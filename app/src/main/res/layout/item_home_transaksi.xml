@@ -8,10 +8,12 @@
     android:layout_height="wrap_content">
 
     <TextView
-        android:id="@+id/textView16"
-        android:layout_width="wrap_content"
+        android:id="@+id/ID_Item_Home"
+        android:layout_width="0dp"
         android:layout_height="wrap_content"
-        android:text="Text"
+        android:layout_marginStart="10dp"
+        android:text="Mas Akbar akan mengservice ac pada pukul 14.00"
+        android:textColor="?android:attr/colorPrimary"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toEndOf="@+id/imageView2"

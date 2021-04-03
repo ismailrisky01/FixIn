@@ -16,6 +16,17 @@
         <action
             android:id="@+id/action_navigation_home_to_loginFragment"
             app:destination="@id/loginFragment" />
+        <action
+            android:id="@+id/action_navigation_home_to_fixerFragment"
+            app:destination="@id/fixerFragment"
+            app:enterAnim="@anim/nav_default_enter_anim"
+            app:popEnterAnim="@anim/nav_default_pop_enter_anim" />
+        <action
+            android:id="@+id/action_navigation_home_to_fixHouseFragment2"
+            app:destination="@id/fixHouseFragment" />
+        <action
+            android:id="@+id/action_navigation_home_to_fixChatFragment2"
+            app:destination="@id/fixChatFragment" />
     </fragment>
 
     <fragment
@@ -48,7 +59,38 @@
         tools:layout="@layout/fragment_register" />
     <fragment
         android:id="@+id/profileFragment"
-        android:name="com.example.fixin.ProfileFragment"
+        android:name="com.example.fixin.ui.profile.ProfileFragment"
         android:label="fragment_profile"
         tools:layout="@layout/fragment_profile" />
+    <fragment
+        android:id="@+id/fixerFragment"
+        android:name="com.example.fixin.ui.fixer.FixerFragment"
+        android:label="fragment_fixer"
+        tools:layout="@layout/fragment_fixer" >
+        <action
+            android:id="@+id/action_fixerFragment_to_navigation_home"
+            app:destination="@id/navigation_home" />
+        <action
+            android:id="@+id/action_fixerFragment_to_fixerPencarianFragment"
+            app:destination="@id/fixerPencarianFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/fixHouseFragment"
+        android:name="com.example.fixin.ui.fixhouse.FixHouseFragment"
+        android:label="fragment_fix_house"
+        tools:layout="@layout/fragment_fix_house" />
+    <fragment
+        android:id="@+id/fixerPencarianFragment"
+        android:name="com.example.fixin.ui.fixer.filter.FixerFilterPencarianFragment"
+        android:label="fragment_fixer_pencarian"
+        tools:layout="@layout/fragment_fixer_filter_pencarian_" >
+        <action
+            android:id="@+id/action_fixerPencarianFragment_to_profileFragment"
+            app:destination="@id/profileFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/fixChatFragment"
+        android:name="com.example.fixin.ui.fixchat.FixChatFragment"
+        android:label="fragment_fix_chat"
+        tools:layout="@layout/fragment_fix_chat" />
 </navigation>

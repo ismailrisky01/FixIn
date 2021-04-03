@@ -8,27 +8,29 @@ import android.view.ViewGroup
 import androidx.navigation.fragment.findNavController
 import com.example.fixin.MainActivity
 import com.example.fixin.R
+import com.example.fixin.databinding.FragmentFixerBinding
+import com.example.fixin.databinding.FragmentLoginBinding
 import com.example.fixin.lib.Google
-import kotlinx.android.synthetic.main.fragment_login.*
 
 class LoginFragment : Google() {
-
+lateinit var binding: FragmentLoginBinding
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View? {
         // Inflate the layout for this fragment
-        return inflater.inflate(R.layout.fragment_login, container, false)
+        binding = FragmentLoginBinding.inflate(inflater, container, false)
+        return binding.root
     }
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
 
-        txtDaftar.setOnClickListener {
+        binding.txtDaftar.setOnClickListener {
 
             findNavController().navigate(R.id.action_loginFragment_to_registerFragment)
         }
-        btnLogin.setOnClickListener {
+        binding.btnLogin.setOnClickListener {
             signIn()
         }
     }

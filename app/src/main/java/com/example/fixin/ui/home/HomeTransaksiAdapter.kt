@@ -6,7 +6,7 @@ import android.view.ViewGroup
 import androidx.recyclerview.widget.RecyclerView
 import com.example.fixin.databinding.ItemHomeTransaksiBinding
 
-class HomeTransaksiAdapter(context: Context, val data: ArrayList<HomeFragment.ModelTransaksi>) :
+class HomeTransaksiAdapter(context: Context, val data: ArrayList<ModelTransaksi>) :
     RecyclerView.Adapter<HomeTransaksiAdapter.ViewHolder>() {
     class ViewHolder(val binding: ItemHomeTransaksiBinding) :
         RecyclerView.ViewHolder(binding.root) {
@@ -20,6 +20,8 @@ class HomeTransaksiAdapter(context: Context, val data: ArrayList<HomeFragment.Mo
     }
 
     override fun onBindViewHolder(holder: ViewHolder, position: Int) {
+        val datas =  data[position]
+        holder.binding.IDItemHome.text = datas.txt1
 
     }
 
@@ -27,3 +29,4 @@ class HomeTransaksiAdapter(context: Context, val data: ArrayList<HomeFragment.Mo
         return data.size
     }
 }
+class ModelTransaksi(val txt1: String)
