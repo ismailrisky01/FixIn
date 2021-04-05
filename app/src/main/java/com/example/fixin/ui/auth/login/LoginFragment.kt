@@ -1,14 +1,11 @@
-package com.example.fixin.ui.login
+package com.example.fixin.ui.auth.login
 
 import android.os.Bundle
-import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import androidx.navigation.fragment.findNavController
-import com.example.fixin.MainActivity
 import com.example.fixin.R
-import com.example.fixin.databinding.FragmentFixerBinding
 import com.example.fixin.databinding.FragmentLoginBinding
 import com.example.fixin.lib.Google
 

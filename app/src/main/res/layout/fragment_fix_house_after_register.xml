@@ -8,7 +8,7 @@
     android:background="@drawable/gradient1"
     android:backgroundTint="@color/colorAccent"
     android:backgroundTintMode="screen"
-    tools:context=".FixHouseAfterRegisterFragment">
+    tools:context=".ui.fixhouse.thanksfixhouse.FixHouseAfterRegisterFragment">
 
     <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"

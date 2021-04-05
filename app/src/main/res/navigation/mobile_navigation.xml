@@ -44,7 +44,7 @@
         tools:layout="@layout/fragment_notifications" />
     <fragment
         android:id="@+id/loginFragment"
-        android:name="com.example.fixin.ui.login.LoginFragment"
+        android:name="com.example.fixin.ui.auth.login.LoginFragment"
         android:label="fragment_login"
         tools:layout="@layout/fragment_login" >
         <action
@@ -56,9 +56,8 @@
     </fragment>
     <fragment
         android:id="@+id/registerFragment"
-        android:name="com.example.fixin.RegisterFragment"
+        android:name="com.example.fixin.ui.auth.register.RegisterFragment"
         android:label="fragment_register"
-<!-- <<<<<<< ismailr-dev -->
         tools:layout="@layout/fragment_register" />
     <fragment
         android:id="@+id/profileFragment"
@@ -81,7 +80,14 @@
         android:id="@+id/fixHouseFragment"
         android:name="com.example.fixin.ui.fixhouse.FixHouseFragment"
         android:label="fragment_fix_house"
-        tools:layout="@layout/fragment_fix_house" />
+        tools:layout="@layout/fragment_fix_house" >
+        <action
+            android:id="@+id/action_fixHouseFragment_to_fixHouseContentFragment"
+            app:destination="@id/fixHouseContentFragment" />
+        <action
+            android:id="@+id/action_fixHouseFragment_to_bukaFixHouseFragment"
+            app:destination="@id/bukaFixHouseFragment" />
+    </fragment>
     <fragment
         android:id="@+id/fixerPencarianFragment"
         android:name="com.example.fixin.ui.fixer.filter.FixerFilterPencarianFragment"
@@ -96,8 +102,7 @@
         android:name="com.example.fixin.ui.fixchat.FixChatFragment"
         android:label="fragment_fix_chat"
         tools:layout="@layout/fragment_fix_chat" />
-        
-    </fragment>
+
     <fragment
         android:id="@+id/fixerAfterRegisterFragment"
         android:name="com.example.fixin.FixerAfterRegisterFragment"
@@ -114,7 +119,7 @@
         tools:layout="@layout/fragment_invoice" />
     <fragment
         android:id="@+id/fixHouseAfterRegister"
-        android:name="com.example.fixin.FixHouseAfterRegisterFragment"
+        android:name="com.example.fixin.ui.fixhouse.thanksfixhouse.FixHouseAfterRegisterFragment"
         android:label="fragment_fix_house_after_register"
         tools:layout="@layout/fragment_fix_house_after_register" >
         <action
@@ -137,7 +142,7 @@
     </fragment>
     <fragment
         android:id="@+id/bukaFixHouseFragment"
-        android:name="com.example.fixin.BukaFixHouseFragment"
+        android:name="com.example.fixin.ui.fixhouse.addfixhouse.BukaFixHouseFragment"
         android:label="fragment_buka_fix_house"
         tools:layout="@layout/fragment_buka_fix_house" >
         <action
@@ -146,7 +151,12 @@
     </fragment>
     <fragment
         android:id="@+id/fixHouseContentFragment"
-        android:name="com.example.fixin.FixHouseContentFragment"
+        android:name="com.example.fixin.ui.fixhouse.detailfixhouse.FixHouseContentFragment"
         android:label="fragment_fix_house_content"
         tools:layout="@layout/fragment_fix_house_content" />
+    <fragment
+        android:id="@+id/riwayatFragment"
+        android:name="com.example.fixin.ui.riwayat.RiwayatFragment"
+        android:label="fragment_riwayat"
+        tools:layout="@layout/fragment_riwayat" />
 </navigation>

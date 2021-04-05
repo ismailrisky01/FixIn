@@ -1,11 +1,9 @@
-package com.example.fixin
+package com.example.fixin.ui.fixhouse.detailfixhouse
 
 import android.os.Bundle
 import androidx.fragment.app.Fragment
-import android.view.LayoutInflater
 import android.view.View
-import android.view.ViewGroup
-import androidx.navigation.fragment.findNavController
+import com.example.fixin.R
 import kotlinx.android.synthetic.main.fragment_fix_house_content.*
 
 class FixHouseContentFragment : Fragment(R.layout.fragment_fix_house_content) {

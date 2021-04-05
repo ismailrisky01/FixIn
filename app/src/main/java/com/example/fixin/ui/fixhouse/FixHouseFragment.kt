@@ -5,6 +5,7 @@ import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import androidx.navigation.fragment.findNavController
 import androidx.recyclerview.widget.LinearLayoutManager
 import com.example.fixin.R
 import com.example.fixin.databinding.FragmentFixHouseBinding
@@ -30,5 +31,9 @@ class FixHouseFragment : Fragment() {
         data.add(ModelFixhouse("sa", "asa", 4, "as", true, "as"))
         binding.IDFixhouseRecyclerview.layoutManager = LinearLayoutManager(requireContext())
         binding.IDFixhouseRecyclerview.adapter = FixHouseAdapter(requireContext(), data)
+
+        binding.IDFixhouseAddBengkel.setOnClickListener {
+            findNavController().navigate(R.id.action_fixHouseFragment_to_bukaFixHouseFragment)
+        }
     }
 }

@@ -8,7 +8,7 @@
     android:background="@drawable/gradient1"
     android:backgroundTint="@color/colorAccent"
     android:backgroundTintMode="screen"
-    tools:context=".BukaFixHouseFragment">
+    tools:context=".ui.fixhouse.addfixhouse.BukaFixHouseFragment">
 
     <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
