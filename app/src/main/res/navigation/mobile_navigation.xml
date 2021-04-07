@@ -58,8 +58,8 @@
         android:id="@+id/registerFragment"
         android:name="com.example.fixin.RegisterFragment"
         android:label="fragment_register"
-<!-- <<<<<<< ismailr-dev -->
         tools:layout="@layout/fragment_register" />
+<!-- <<<<<<< ismailr-dev -->
     <fragment
         android:id="@+id/profileFragment"
         android:name="com.example.fixin.ui.profile.ProfileFragment"
@@ -96,8 +96,12 @@
         android:name="com.example.fixin.ui.fixchat.FixChatFragment"
         android:label="fragment_fix_chat"
         tools:layout="@layout/fragment_fix_chat" />
-        
-    </fragment>
+    <fragment
+        android:id="@+id/riwayatFragment"
+        android:name="com.example.fixin.RiwayatFragment"
+        android:label="fragment_riwayat"
+        tools:layout="@layout/fragment_riwayat" />
+
     <fragment
         android:id="@+id/fixerAfterRegisterFragment"
         android:name="com.example.fixin.FixerAfterRegisterFragment"
