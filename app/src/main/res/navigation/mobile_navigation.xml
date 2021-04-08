@@ -95,7 +95,7 @@
         android:id="@+id/fixChatFragment"
         android:name="com.example.fixin.ui.fixchat.FixChatFragment"
         android:label="fragment_fix_chat"
-        tools:layout="@layout/fragment_fix_chat" />
+        tools:layout="@layout/fragment_fix_chat_menu" />
     <fragment
         android:id="@+id/riwayatFragment"
         android:name="com.example.fixin.RiwayatFragment"
@@ -153,4 +153,9 @@
         android:name="com.example.fixin.FixHouseContentFragment"
         android:label="fragment_fix_house_content"
         tools:layout="@layout/fragment_fix_house_content" />
+    <fragment
+        android:id="@+id/chatFragment"
+        android:name="com.example.fixin.ChatFragment"
+        android:label="fragment_chat"
+        tools:layout="@layout/fragment_chat" />
 </navigation>
