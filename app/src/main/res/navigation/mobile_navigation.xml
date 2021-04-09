@@ -62,6 +62,7 @@
         android:name="com.example.fixin.ui.auth.register.RegisterFragment"
         android:label="fragment_register"
         tools:layout="@layout/fragment_register" />
+<!-- <<<<<<< ismailr-dev -->
     <fragment
         android:id="@+id/profileFragment"
         android:name="com.example.fixin.ui.profile.ProfileFragment"
@@ -104,7 +105,9 @@
         android:id="@+id/navigation_chat"
         android:name="com.example.fixin.ui.fixchat.FixChatFragment"
         android:label="fragment_fix_chat"
+
         tools:layout="@layout/fragment_fix_chat" />
+
 
     <fragment
         android:id="@+id/fixerAfterRegisterFragment"
@@ -158,6 +161,7 @@
         android:label="fragment_fix_house_content"
         tools:layout="@layout/fragment_fix_house_content" />
     <fragment
+
         android:id="@+id/navigation_riwayat"
         android:name="com.example.fixin.ui.riwayat.RiwayatFragment"
         android:label="fragment_riwayat"
@@ -167,4 +171,5 @@
         android:name="com.example.fixin.ui.fixask.FixAskFragment"
         android:label="fragment_fix_ask"
         tools:layout="@layout/fragment_fix_ask" />
+
 </navigation>
