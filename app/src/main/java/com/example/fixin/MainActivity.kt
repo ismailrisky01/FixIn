@@ -2,10 +2,7 @@ package com.example.fixin
 
 import android.os.Bundle
 import android.view.View
-import android.widget.Toast
-import com.google.android.material.bottomnavigation.BottomNavigationView
 import androidx.appcompat.app.AppCompatActivity
-import androidx.fragment.app.Fragment
 import androidx.navigation.findNavController
 import androidx.navigation.ui.AppBarConfiguration
 import androidx.navigation.ui.setupActionBarWithNavController
@@ -24,7 +21,7 @@ class MainActivity : AppCompatActivity() {
         val user = FirebaseAuth.getInstance().currentUser
         val navController = findNavController(R.id.nav_host_fragment)
         val appBarConfiguration = AppBarConfiguration(
-            setOf(R.id.navigation_home, R.id.navigation_dashboard, R.id.navigation_notifications)
+            setOf(R.id.navigation_home, R.id.navigation_riwayat, R.id.navigation_chat)
         )
         setupActionBarWithNavController(navController, appBarConfiguration)
         binding.navView.setupWithNavController(navController)
@@ -36,15 +33,12 @@ class MainActivity : AppCompatActivity() {
             }
         }
 
-        if (user != null) {
-
-        } else {
+        if (user == null) {
             val id = findViewById<View>(R.id.nav_host_fragment)
             findNavController(id.id).navigateUp()
             findNavController(id.id).navigate(R.id.action_navigation_home_to_loginFragment)
             binding.navView.visibility = View.GONE
         }
-
 
     }
 

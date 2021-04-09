@@ -1,13 +1,10 @@
-package com.example.fixin
+package com.example.fixin.ui.fixhouse.thanksfixhouse
 
 import android.os.Bundle
 import androidx.fragment.app.Fragment
-import android.view.LayoutInflater
 import android.view.View
-import android.view.ViewGroup
 import android.widget.Button
-import androidx.fragment.app.FragmentManager
-import androidx.navigation.fragment.findNavController
+import com.example.fixin.R
 
 // TODO: Rename parameter arguments, choose names that match
 // the fragment initialization parameters, e.g. ARG_ITEM_NUMBER
@@ -24,8 +21,7 @@ class FixHouseAfterRegisterFragment : Fragment(R.layout.fragment_fix_house_after
         super.onViewCreated(view, savedInstanceState)
         val button: Button = view.findViewById(R.id.button_menu_utama_fix_house)
         button.setOnClickListener {
-            val action = FixHouseAfterRegisterFragmentDirections.actionFixHouseAfterRegisterToNavigationHome()
-            findNavController().navigate(action)
+
         }
     }
     // TODO: Rename and change types of parameters

@@ -18,8 +18,7 @@ class BukaJasaFixerFragment : Fragment(R.layout.fragment_buka_jasa_fixer) {
      override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
          super.onViewCreated(view, savedInstanceState)
          button_daftarkan_fixer.setOnClickListener {
-             val action = BukaJasaFixerFragmentDirections.actionBukaJasaFixerFragmentToFixerAfterRegisterFragment()
-             findNavController().navigate(action)
+
          }
      }
 

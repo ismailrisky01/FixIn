@@ -10,18 +10,12 @@ import androidx.fragment.app.FragmentTransaction
 import androidx.navigation.fragment.findNavController
 import kotlinx.android.synthetic.main.fragment_fixer_after_register.*
 
-// TODO: Rename parameter arguments, choose names that match
-// the fragment initialization parameters, e.g. ARG_ITEM_NUMBER
-//private const val ARG_PARAM1 = "param1"
-//private const val ARG_PARAM2 = "param2"
-
 
 class FixerAfterRegisterFragment : Fragment(R.layout.fragment_fixer_after_register) {
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
         button_menu_utama_fixer.setOnClickListener {
-            val action = FixerAfterRegisterFragmentDirections.actionFixerAfterRegisterFragmentToNavigationHome()
-            findNavController().navigate(action)
+
         }
     }
 }

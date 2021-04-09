@@ -7,7 +7,7 @@
     android:backgroundTintMode="screen"
     android:backgroundTint="@color/colorAccent"
     android:background="@drawable/gradient1"
-    tools:context=".FixHouseContentFragment">
+    tools:context=".ui.fixhouse.detailfixhouse.FixHouseContentFragment">
 
     <!-- TODO: Update blank fragment layout -->
 

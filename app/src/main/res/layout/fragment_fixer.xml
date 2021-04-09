@@ -119,7 +119,6 @@
             android:layout_marginStart="25dp"
             android:layout_marginTop="10dp"
             android:thumb="@drawable/thumb"
-
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/button10"
             app:track="@drawable/track" />

@@ -15,7 +15,13 @@ class FixHouseAdapter(val context: Context, val data: ArrayList<ModelFixhouse>) 
     lateinit var binding: ItemFixhouseBinding
 
     class ViewHolder(val binding: ItemFixhouseBinding) : RecyclerView.ViewHolder(binding.root) {
+        init {
+            binding.IDFixhouse.setOnClickListener {
+                it.findNavController()
+                    .navigate(R.id.action_fixHouseFragment_to_fixHouseContentFragment)
+            }
 
+        }
     }
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): ViewHolder {
@@ -33,4 +39,11 @@ class FixHouseAdapter(val context: Context, val data: ArrayList<ModelFixhouse>) 
     }
 }
 
-class ModelFixhouse(val image: String, val nama: String, val rating: Int,val alamat:String,val keterangan_buka :Boolean,val no_hp :String)
+class ModelFixhouse(
+    val image: String,
+    val nama: String,
+    val rating: Int,
+    val alamat: String,
+    val keterangan_buka: Boolean,
+    val no_hp: String
+)

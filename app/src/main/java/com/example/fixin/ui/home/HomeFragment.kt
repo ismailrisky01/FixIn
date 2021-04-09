@@ -48,7 +48,7 @@ lateinit var binding: FragmentHomeBinding
             findNavController().navigate(R.id.action_navigation_home_to_fixHouseFragment2)
         }
         binding.IDHomeBtnChat.setOnClickListener {
-            findNavController().navigate(R.id.action_navigation_home_to_fixChatFragment2)
+            findNavController().navigate(R.id.action_navigation_home_to_fixAskFragment)
         }
     }
 
