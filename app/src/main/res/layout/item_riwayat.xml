@@ -26,6 +26,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="TextView"
+        android:textStyle="bold"
         app:layout_constraintStart_toEndOf="@+id/ID_Item_Riwayat_Image"
         app:layout_constraintTop_toTopOf="parent" />
 
@@ -48,6 +49,16 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toEndOf="@+id/ID_Item_Riwayat_Rating"
         app:layout_constraintTop_toTopOf="parent" />
+
+    <ImageView
+        android:id="@+id/ID_Riwayat_Info"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/ID_Item_Riwayat_Jam"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/ic_baseline_info_24" />
 </androidx.constraintlayout.widget.ConstraintLayout>
 </androidx.cardview.widget.CardView>
 

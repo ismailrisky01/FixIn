@@ -121,6 +121,7 @@ open class Google : Fragment() {
         // Google sign out
         googleSignInClient.signOut().addOnCompleteListener(requireActivity()) {
             updateUI(null)
+
         }
 
     }
@@ -140,7 +141,6 @@ open class Google : Fragment() {
         if (user != null) {
 
         } else {
-
         }
     }
 

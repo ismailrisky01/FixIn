@@ -5,13 +5,17 @@ import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import androidx.navigation.NavOptions
+import androidx.navigation.fragment.findNavController
 import androidx.recyclerview.widget.LinearLayoutManager
 import com.example.fixin.R
 import com.example.fixin.databinding.FragmentHomeBinding
 import com.example.fixin.databinding.FragmentProfileBinding
+import com.example.fixin.lib.Google
+import com.example.fixin.ui.auth.login.LoginFragment
 
 
-class ProfileFragment : Fragment() {
+class ProfileFragment : Google() {
     lateinit var binding: FragmentProfileBinding
 
     override fun onCreateView(
@@ -30,7 +34,16 @@ class ProfileFragment : Fragment() {
         data.add(ModelProfileKeahlian("Perawatan helikpter"))
         data.add(ModelProfileKeahlian("Cuci kendaraan"))
         binding.IDProfilRecyclerKeahlian.layoutManager = LinearLayoutManager(requireContext())
-        binding.IDProfilRecyclerKeahlian.adapter = ProfileAdapter(requireContext(),data)
+        binding.IDProfilRecyclerKeahlian.adapter = ProfileAdapter(requireContext(), data)
+        binding.IDProfileBtnLogOut.setOnClickListener {
+            signOut()
+            val navOption = NavOptions.Builder().setPopUpTo(R.id.loginFragment,true).build()
+            findNavController().navigate(R.id.action_profileFragment_to_loginFragment,null,navOption)
+
+        }
+        binding.IDProfileBtnBack.setOnClickListener {
+            findNavController().popBackStack()
+        }
     }
 }
 

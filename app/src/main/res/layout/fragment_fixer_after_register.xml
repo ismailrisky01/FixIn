@@ -130,7 +130,7 @@
         app:layout_constraintVertical_bias="0.0" />
 
     <Button
-        android:id="@+id/button_menu_utama_fixer"
+        android:id="@+id/ID_Fixer_After_Register_Button"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:backgroundTint="@color/green"

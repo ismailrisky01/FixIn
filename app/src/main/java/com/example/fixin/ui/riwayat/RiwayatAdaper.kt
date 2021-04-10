@@ -3,7 +3,9 @@ package com.example.fixin.ui.riwayat
 import android.content.Context
 import android.view.LayoutInflater
 import android.view.ViewGroup
+import androidx.navigation.findNavController
 import androidx.recyclerview.widget.RecyclerView
+import com.example.fixin.R
 import com.example.fixin.databinding.ItemRiwayatBinding
 import kotlin.collections.ArrayList
 
@@ -19,6 +21,9 @@ class RiwayatAdaper(val context: Context, val data: ArrayList<ModelRiwayat>) :
         holder.binding.IDItemRiwayatNama.text = data.nama
         holder.binding.IDItemRiwayatRating.rating = data.rating
         holder.binding.IDItemRiwayatJam.text = data.time
+        holder.binding.IDRiwayatInfo.setOnClickListener {
+            it.findNavController().navigate(R.id.action_navigation_riwayat_to_fixHouseContentFragment)
+        }
     }
 
     override fun getItemCount(): Int {

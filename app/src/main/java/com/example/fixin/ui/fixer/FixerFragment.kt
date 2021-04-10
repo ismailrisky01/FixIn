@@ -35,29 +35,21 @@ companion object{
             ModelFixer("https://firebasestorage.googleapis.com/v0/b/project3-359bf.appspot.com/o/warung1.jfif?alt=media&token=7dbff520-9342-41e8-ba38-7ce71c237241","Alat Rumah tangga")
         )
         data.add(
-            ModelFixer("https://firebasestorage.googleapis.com/v0/b/project3-359bf.appspot.com/o/warung1.jfif?alt=media&token=7dbff520-9342-41e8-ba38-7ce71c237241","Alat Rumah tangga")
+            ModelFixer("https://firebasestorage.googleapis.com/v0/b/project3-359bf.appspot.com/o/warung1.jfif?alt=media&token=7dbff520-9342-41e8-ba38-7ce71c237241","Elektronika")
         )
         data.add(
-            ModelFixer("https://firebasestorage.googleapis.com/v0/b/project3-359bf.appspot.com/o/warung1.jfif?alt=media&token=7dbff520-9342-41e8-ba38-7ce71c237241","Alat Rumah tangga")
+            ModelFixer("https://firebasestorage.googleapis.com/v0/b/project3-359bf.appspot.com/o/warung1.jfif?alt=media&token=7dbff520-9342-41e8-ba38-7ce71c237241","Komputer")
         )
         data.add(
-            ModelFixer("https://firebasestorage.googleapis.com/v0/b/project3-359bf.appspot.com/o/warung1.jfif?alt=media&token=7dbff520-9342-41e8-ba38-7ce71c237241","Alat Rumah tangga")
+            ModelFixer("https://firebasestorage.googleapis.com/v0/b/project3-359bf.appspot.com/o/warung1.jfif?alt=media&token=7dbff520-9342-41e8-ba38-7ce71c237241","Alat Transportasi")
         )
         data.add(
-            ModelFixer("https://firebasestorage.googleapis.com/v0/b/project3-359bf.appspot.com/o/warung1.jfif?alt=media&token=7dbff520-9342-41e8-ba38-7ce71c237241","Alat Rumah tangga")
+            ModelFixer("https://firebasestorage.googleapis.com/v0/b/project3-359bf.appspot.com/o/warung1.jfif?alt=media&token=7dbff520-9342-41e8-ba38-7ce71c237241","Pembersihan")
         )
         data.add(
-            ModelFixer("https://firebasestorage.googleapis.com/v0/b/project3-359bf.appspot.com/o/warung1.jfif?alt=media&token=7dbff520-9342-41e8-ba38-7ce71c237241","Alat Rumah tangga")
+            ModelFixer("https://firebasestorage.googleapis.com/v0/b/project3-359bf.appspot.com/o/warung1.jfif?alt=media&token=7dbff520-9342-41e8-ba38-7ce71c237241","Bangunan")
         )
-        data.add(
-            ModelFixer("https://firebasestorage.googleapis.com/v0/b/project3-359bf.appspot.com/o/warung1.jfif?alt=media&token=7dbff520-9342-41e8-ba38-7ce71c237241","Alat Rumah tangga")
-        )
-        data.add(
-            ModelFixer("https://firebasestorage.googleapis.com/v0/b/project3-359bf.appspot.com/o/warung1.jfif?alt=media&token=7dbff520-9342-41e8-ba38-7ce71c237241","Alat Rumah tangga")
-        )
-        data.add(
-            ModelFixer("https://firebasestorage.googleapis.com/v0/b/project3-359bf.appspot.com/o/warung1.jfif?alt=media&token=7dbff520-9342-41e8-ba38-7ce71c237241","Alat Rumah tangga")
-        )
+
         binding.IDFixerRecyclerView.layoutManager = GridLayoutManager(requireContext(),2)
         binding.IDFixerRecyclerView.adapter = FixerAdapter(requireContext(),data)
 
@@ -91,5 +83,11 @@ companion object{
             findNavController().navigate(R.id.action_fixerFragment_to_navigation_home)
         }
 
+        binding.IDFixerBtnBukaJasa.setOnClickListener {
+            findNavController().navigate(R.id.action_fixerFragment_to_bukaJasaFixerFragment)
+        }
+        binding.IDFixerBtnSetFilter.setOnClickListener {
+            findNavController().navigate(R.id.action_fixerFragment_to_fixerPencarianFragment)
+        }
     }
 }
