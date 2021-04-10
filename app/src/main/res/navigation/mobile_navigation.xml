@@ -3,14 +3,14 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/mobile_navigation"
-    app:startDestination="@id/navigation_home">
+    app:startDestination="@id/loginFragment">
 
     <fragment
         android:id="@+id/navigation_home"
         android:name="com.example.fixin.ui.home.HomeFragment"
         android:label="@string/title_home"
         tools:layout="@layout/fragment_home">
-        <!-- <<<<<<< ismailr-dev -->
+
         <action
             android:id="@+id/action_navigation_home_to_profileFragment"
             app:destination="@id/profileFragment" />
@@ -41,11 +41,6 @@
         tools:layout="@layout/fragment_dashboard" />
 
     <fragment
-        android:id="@+id/navigation_notifications"
-        android:name="com.example.fixin.ui.notifications.NotificationsFragment"
-        android:label="@string/title_notifications"
-        tools:layout="@layout/fragment_notifications" />
-    <fragment
         android:id="@+id/loginFragment"
         android:name="com.example.fixin.ui.auth.login.LoginFragment"
         android:label="fragment_login"
@@ -56,18 +51,29 @@
         <action
             android:id="@+id/action_loginFragment_to_registerFragment"
             app:destination="@id/registerFragment" />
+        <action
+            android:id="@+id/action_loginFragment_to_navigation_home2"
+            app:destination="@id/navigation_home" />
     </fragment>
     <fragment
         android:id="@+id/registerFragment"
         android:name="com.example.fixin.ui.auth.register.RegisterFragment"
         android:label="fragment_register"
-        tools:layout="@layout/fragment_register" />
+        tools:layout="@layout/fragment_register" >
+        <action
+            android:id="@+id/action_registerFragment_to_navigation_home"
+            app:destination="@id/navigation_home" />
+    </fragment>
 <!-- <<<<<<< ismailr-dev -->
     <fragment
         android:id="@+id/profileFragment"
         android:name="com.example.fixin.ui.profile.ProfileFragment"
         android:label="fragment_profile"
-        tools:layout="@layout/fragment_profile" />
+        tools:layout="@layout/fragment_profile" >
+        <action
+            android:id="@+id/action_profileFragment_to_loginFragment"
+            app:destination="@id/loginFragment" />
+    </fragment>
     <fragment
         android:id="@+id/fixerFragment"
         android:name="com.example.fixin.ui.fixer.FixerFragment"
@@ -79,6 +85,9 @@
         <action
             android:id="@+id/action_fixerFragment_to_fixerPencarianFragment"
             app:destination="@id/fixerPencarianFragment" />
+        <action
+            android:id="@+id/action_fixerFragment_to_bukaJasaFixerFragment"
+            app:destination="@id/bukaJasaFixerFragment" />
     </fragment>
     <fragment
         android:id="@+id/fixHouseFragment"
@@ -91,6 +100,9 @@
         <action
             android:id="@+id/action_fixHouseFragment_to_bukaFixHouseFragment"
             app:destination="@id/bukaFixHouseFragment" />
+        <action
+            android:id="@+id/action_fixHouseFragment_to_navigation_home"
+            app:destination="@id/navigation_home" />
     </fragment>
     <fragment
         android:id="@+id/fixerPencarianFragment"
@@ -100,13 +112,15 @@
         <action
             android:id="@+id/action_fixerPencarianFragment_to_profileFragment"
             app:destination="@id/profileFragment" />
+        <action
+            android:id="@+id/action_fixerPencarianFragment_to_fixerFragment"
+            app:destination="@id/fixerFragment" />
     </fragment>
     <fragment
         android:id="@+id/navigation_chat"
         android:name="com.example.fixin.ui.fixchat.FixChatFragment"
         android:label="fragment_fix_chat"
-
-        tools:layout="@layout/fragment_fix_chat" />
+        tools:layout="@layout/fragment_chat" />
 
 
     <fragment
@@ -116,6 +130,9 @@
         tools:layout="@layout/fragment_fixer_after_register">
         <action
             android:id="@+id/action_fixerAfterRegisterFragment_to_navigation_home"
+            app:destination="@id/navigation_home" />
+        <action
+            android:id="@+id/action_fixerAfterRegisterFragment_to_navigation_home2"
             app:destination="@id/navigation_home" />
     </fragment>
     <fragment
@@ -145,6 +162,12 @@
         <action
             android:id="@+id/action_bukaJasaFixerFragment_to_fixerAfterRegisterFragment"
             app:destination="@id/fixerAfterRegisterFragment" />
+        <action
+            android:id="@+id/action_bukaJasaFixerFragment_to_fixerAfterRegisterFragment2"
+            app:destination="@id/fixerAfterRegisterFragment" />
+        <action
+            android:id="@+id/action_bukaJasaFixerFragment_to_fixerFragment"
+            app:destination="@id/fixerFragment" />
     </fragment>
     <fragment
         android:id="@+id/bukaFixHouseFragment"
@@ -159,17 +182,29 @@
         android:id="@+id/fixHouseContentFragment"
         android:name="com.example.fixin.ui.fixhouse.detailfixhouse.FixHouseContentFragment"
         android:label="fragment_fix_house_content"
-        tools:layout="@layout/fragment_fix_house_content" />
+        tools:layout="@layout/fragment_fix_house_content" >
+        <action
+            android:id="@+id/action_fixHouseContentFragment_to_fixHouseFragment"
+            app:destination="@id/fixHouseFragment" />
+    </fragment>
     <fragment
 
         android:id="@+id/navigation_riwayat"
         android:name="com.example.fixin.ui.riwayat.RiwayatFragment"
         android:label="fragment_riwayat"
-        tools:layout="@layout/fragment_riwayat" />
+        tools:layout="@layout/fragment_riwayat" >
+        <action
+            android:id="@+id/action_navigation_riwayat_to_fixHouseContentFragment"
+            app:destination="@id/fixHouseContentFragment" />
+    </fragment>
     <fragment
         android:id="@+id/fixAskFragment"
         android:name="com.example.fixin.ui.fixask.FixAskFragment"
         android:label="fragment_fix_ask"
-        tools:layout="@layout/fragment_fix_ask" />
+        tools:layout="@layout/fragment_fix_ask" >
+        <action
+            android:id="@+id/action_fixAskFragment_to_navigation_home"
+            app:destination="@id/navigation_home" />
+    </fragment>
 
 </navigation>

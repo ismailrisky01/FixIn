@@ -35,5 +35,8 @@ class FixHouseFragment : Fragment() {
         binding.IDFixhouseAddBengkel.setOnClickListener {
             findNavController().navigate(R.id.action_fixHouseFragment_to_bukaFixHouseFragment)
         }
+        binding.IDFixhouseBtnBack.setOnClickListener {
+            findNavController().navigate(R.id.action_fixHouseFragment_to_navigation_home )
+        }
     }
 }

@@ -6,7 +6,9 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.widget.Toast
+import androidx.navigation.fragment.findNavController
 import androidx.recyclerview.widget.LinearLayoutManager
+import com.example.fixin.R
 import com.example.fixin.databinding.FragmentFixerFilterPencarianBinding
 import com.example.fixin.ui.fixer.FixerFragment
 
@@ -31,6 +33,9 @@ class FixerFilterPencarianFragment : Fragment() {
         data.add(ModelFixerPencarian("s","a",3))
         binding.IDFixerFilterPencarianRecyclerView.layoutManager = LinearLayoutManager(requireContext())
         binding.IDFixerFilterPencarianRecyclerView.adapter = FixerFilterAdapter(requireContext(),data)
+        binding.IDFixerFilterPencarianBtnBack.setOnClickListener {
+            findNavController().navigate(R.id.action_fixerPencarianFragment_to_fixerFragment)
+        }
 
     }
 

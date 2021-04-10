@@ -1,41 +1,32 @@
 package com.example.fixin.ui.fixhouse.detailfixhouse
 
 import android.os.Bundle
+import android.view.LayoutInflater
 import androidx.fragment.app.Fragment
 import android.view.View
+import android.view.ViewGroup
+import androidx.navigation.fragment.findNavController
 import com.example.fixin.R
+import com.example.fixin.databinding.FragmentFixHouseContentBinding
 import kotlinx.android.synthetic.main.fragment_fix_house_content.*
 
 class FixHouseContentFragment : Fragment(R.layout.fragment_fix_house_content) {
+    lateinit var binding: FragmentFixHouseContentBinding
+
+
+    override fun onCreateView(
+        inflater: LayoutInflater,
+        container: ViewGroup?,
+        savedInstanceState: Bundle?
+    ): View? {
+        binding = FragmentFixHouseContentBinding.inflate(inflater, container, false)
+        return binding.root
+    }
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
-        button_lokasi.setOnClickListener{
-//            findNavController().navigate()
-        }
-
-        button_hubungi.setOnClickListener {
-//            findNavController().navigate()
+        binding.IDFixhouseBtnBack.setOnClickListener {
+            findNavController().navigate(R.id.action_fixHouseContentFragment_to_fixHouseFragment)
         }
     }
-
-//    companion object {
-//        /**
-//         * Use this factory method to create a new instance of
-//         * this fragment using the provided parameters.
-//         *
-//         * @param param1 Parameter 1.
-//         * @param param2 Parameter 2.
-//         * @return A new instance of fragment FixHouseContentFragment.
-//         */
-//        // TODO: Rename and change types and number of parameters
-//        @JvmStatic
-//        fun newInstance(param1: String, param2: String) =
-//                FixHouseContentFragment().apply {
-//                    arguments = Bundle().apply {
-//                        putString(ARG_PARAM1, param1)
-//                        putString(ARG_PARAM2, param2)
-//                    }
-//                }
-//    }
 }

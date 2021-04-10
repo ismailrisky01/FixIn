@@ -27,9 +27,9 @@ class RiwayatFragment : Fragment() {
         data.add(ModelRiwayat("Ismail",4.0f,"20 Maret 2000"))
         data.add(ModelRiwayat("Ismail",4.5f,"20 Maret 2000"))
         data.add(ModelRiwayat("Ismail",4f,"20 Maret 2000"))
-        Toast.makeText(requireContext(), "Halllo", Toast.LENGTH_SHORT).show()
         binding.IDRiwayatRecyclerview.layoutManager = LinearLayoutManager(requireContext())
         binding.IDRiwayatRecyclerview.adapter = RiwayatAdaper(requireContext(),data)
+
     }
 
 }
